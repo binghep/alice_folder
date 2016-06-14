@@ -3,6 +3,7 @@
 This file is used for changing all conf products havinig skus ending in 'CC'. remove one C. 
 
 */
+return;
 require_once '../app/Mage.php';
 Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
 

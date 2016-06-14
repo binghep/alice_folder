@@ -1,4 +1,5 @@
 <?php
+return;
 /*
 This file creates a subcategory of Nutrition category (id: 80)
 */

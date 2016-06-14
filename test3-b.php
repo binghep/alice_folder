@@ -1,4 +1,5 @@
 <?php
+return;
 /*
 This file is used for reading product category-wise json
 */

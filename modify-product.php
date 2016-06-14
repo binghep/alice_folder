@@ -1,5 +1,5 @@
 <?php
-
+return;
 /*
 usage:
 go to www.1661hk.com/alice/modify.php

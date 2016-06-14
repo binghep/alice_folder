@@ -1,4 +1,5 @@
 <?php
+return;
 /*
 This file is used for changing all conf products havinig skus ending in 'CC'. remove one C. 
 

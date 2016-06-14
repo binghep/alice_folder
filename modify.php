@@ -12,7 +12,7 @@ For example:
 store,sku,weight
 admin,2912901300270408L,3
 */
-
+return;
 require_once '../app/Mage.php';
 Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
 /*

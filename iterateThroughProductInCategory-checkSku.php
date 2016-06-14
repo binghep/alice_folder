@@ -3,6 +3,7 @@
 This file is used for printing the simples products that has sku ending in C
 
 */
+return;
 require_once '../app/Mage.php';
 Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
 

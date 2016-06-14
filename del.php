@@ -12,7 +12,7 @@ For example:
 store,sku,magmi:delete
 admin,2912901300270408L,1
 */
-
+return;
 require_once '../app/Mage.php';
 Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
 $sku=$_GET['sku'];
