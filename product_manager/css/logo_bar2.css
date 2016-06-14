@@ -1,0 +1,191 @@
+.logo-bar {
+    filter: none;
+    height: 48px;
+    border-bottom-width: 0;
+    background-color: #2dbe60;
+}
+.logo-bar .evernote-logo{
+	background: url(../img/1661USA-Logo.png) no-repeat 13px 8px;
+    -webkit-background-size: 157px 35px;
+    -moz-background-size: 157px 35px;
+    -o-background-size: 157px 35px;
+    background-size: 157px 35px;
+}
+.evernote-logo, .evernote-logo:visited {
+    /* background: url(/redesign/global/img/evernote-logo.png) no-repeat 13px 8px; */
+	background: url(../img/1661USA-Logo.png) no-repeat 13px 8px;
+     -webkit-background-size: 159px 35px; 
+    -moz-background-size: 159px 35px;
+    -o-background-size: 159px 35px;
+     background-size: 159px 35px; 
+}
+.evernote-logo, .evernote-logo:visited {
+    text-indent: -9999px;
+    display: inline-block;
+    padding: 0;
+     width: 175px; 
+     height: 48px; 
+     margin-left: 0; 
+     margin-top: 0; 
+}
+
+.logo-bar a.save-button, .logo-bar a.view-button {
+    margin: 3px 8px 3px 8px;
+}
+.Btn_emph:focus, .Btn_emph:visited {
+    color: #fff;
+}
+.save-button-desktop:link, .view-button-desktop:link, .save-button-desktop:visited, .view-button-desktop:visited, .save-button-desktop:hover, .view-button-desktop:hover {
+    margin-left: 0;
+    font-size: 14px;
+    float: right;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+a.save-button, a.view-button {
+    font-size: 1em;
+    font-size: 1rem;
+    line-height: 2.08333333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+    background-color: #14aa57;
+    border-color: #18a269;
+    min-height: 2.08333333em;
+    min-height: 2.08333333rem;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+/**/
+.switch-account-div.active {
+    cursor: pointer;
+    z-index: 1001;
+}
+.switch-account-div {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+    display: none;
+    float: right;
+    height: 48px;
+    z-index: 9999;
+    margin-right: 15px;
+    position: relative;
+    max-width: 208px;
+}
+.switch-dropdown-arrow {
+    background: url(../img/user-dropdown-arrow.png) no-repeat;
+    -webkit-background-size: 16px 9px;
+    -moz-background-size: 16px 9px;
+    -o-background-size: 16px 9px;
+    background-size: 16px 9px;
+}
+.switch-dropdown-arrow {
+    width: 16px;
+    height: 9px;
+    position: absolute;
+    top: -9px;
+    left: 166px;
+}
+.switch-account-dropdown {
+    display: none;
+    background-color: #f4f6f7;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    position: absolute;
+    right: -3px;
+    top: 49px;
+    z-index: 9999;
+    width: 190px;
+    border: 1px solid rgba(153,158,161,.9);
+    border-top: 0;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+.switch-account-menuitem:hover {
+    background-color: #ced2d6;
+}
+a:visited, .u-faux-anchor:visited {
+    color: #4a8db8;
+}
+a:active, .u-faux-anchor:active, a:hover, .u-faux-anchor:hover {
+    color: #4a8db8;
+    text-decoration: underline;
+    outline: 0;
+    cursor: pointer;
+}
+.switch-account-menuitem {
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    color: #646e71;
+    border-bottom: 1px solid #dadddf;
+}
+.switch-account-icon-free {
+    background: url(../img/badge-free.png) no-repeat center center;
+    -webkit-background-size: 18px 18px;
+    -moz-background-size: 18px 18px;
+    -o-background-size: 18px 18px;
+    background-size: 18px 18px;
+}
+.switch-account-icon {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    top: 12px;
+    width: 33px;
+}
+.switch-account-div.active {
+    cursor: pointer;
+}
+.switch-account-name {
+    vertical-align: top;
+    padding-top: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+    font-family: caecilia,Times,serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    display: inline-block;
+    max-width: 150px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.active .switch-account-arrow {
+    display: inline-block;
+}
+.switch-account-arrow {
+    background: url(../img/user-arrow-icon.png) no-repeat;
+    -webkit-background-size: 9px 5px;
+    -moz-background-size: 9px 5px;
+    -o-background-size: 9px 5px;
+    background-size: 9px 5px;
+}
+.switch-account-arrow {
+    display: none;
+    height: 5px;
+    margin-left: 6px;
+    width: 9px;
+}
+.switch-account-logout:hover {
+    background-color: #ced2d6;
+}
+.switch-account-logout {
+    padding: 12px 20px;
+    color: #566265;
+    background-color: #eaecee;
+    border-top: 1px solid #fefefe;
+}

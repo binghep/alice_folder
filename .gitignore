@@ -1,17 +1,28 @@
-#product manager + libarary + PHPMailer folder inside Alice folder
+#product manager + libarary (No PHPMailer)
 
-# Ignore everything
-*
+/forgot_password_tokens/
+/product_manager_need_amazon_url/
+/magmi_csv/
+/category_iterator/
+/steven/
+/magmi/
+/PHPMailer/
+/pick_up_email_template/
+/blueoak/
+/justin/
+/fix_brand/
+/customer/
+/fix_image/
+/add_chinese/
+/esi/
+/categoriwise/
+/promotions/
+/slider/
+/qq_share/
+/addFontToImage/
+/curl/
 
-# except (higher precedence)
-!.gitignore
-!product_manager/
-!library/fpdf/fpdf181/
-library/fpdf/fpdf181/*.pdf
-#!PHPMailer/
-
-
-#ignore the following inside above wanted folders
-product_manager/database/database.php
-product_manager/holly_version/database.php
-product_manger/uploads/
+/library/fpdf/fpdf181/tutorial/*.pdf
+/product_manager/database/database.php
+/product_manager/holly_version/database.php
+/product_manager/uploads/

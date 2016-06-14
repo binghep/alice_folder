@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+	<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+	<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+	<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	
+	<head>
+		<!-- site charset -->
+		<meta charset="utf-8">
+		<title>Real Ajax Uploader</title>
+		<meta name="keywords" content="ajax uploader, html5 uploader, image uploader, chunk upload, multiple upload, HTML5, ajax,XML,JavaScript">
+		<meta name="description" content="Html5 multiple file uploader">
+		<meta name="author" content="Alban Xhaferllari">
+		
+		<!--  Stylesheets -->
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Twitter Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css"> <!-- Twitter Bootstrap (responsive) -->
+		<link rel="stylesheet" href="style.css"> <!-- main stylesheet -->
+		<link rel="stylesheet" href="css/style-responsive.css"> <!-- main stylesheet (responsive) -->
+		<!-- PACK-theme -->
+		<!-- PACK-font -->
+		<!--  Meta  -->
+		
+		<!-- favicons for the site  -->
+
+		<!--  Device viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<!--  HTML5 for older browsers -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--  IE8 fixes -->
+		<!--[if IE 8]>
+			<link rel="stylesheet" href="css/ie8.css">
+		<![endif]-->
+		<link rel="stylesheet" href="css/theme-options.css">
+		
+		<script src="js/jquery.min.js"></script> <!--  jQuery  -->
+		<script src="js/bootstrap.min.js"></script> <!--  bootstrap  -->
+		
+		<script>
+		if (top.location != location) {
+		    top.location.href = document.location.href ;
+		}
+		</script>
+
+
+		<script type="text/javascript" src="js/prettify.js"></script>
+		<link rel="stylesheet" href="css/prettify.css">
+		<style>
+			.example-box 
+			{
+				background: #42B7ED;
+				border-radius:5px;
+				text-align:center;
+				padding:5px;
+			}
+		</style>
+	</head>
+	
+<body>
+	<!-- GO TO TOP BUTTON -->
+	<div id="totop" class="hidden-phone hidden-tablet"><a class="btn btn-inverse">^</a></div>
+	<div class="container" id="main-container">
+	
+		<header>
+			<h1 id="logotype"><a href="index.php"><img src="images/logo.png" alt="Real Ajax Uploader logo"></a></h1>
+			<div id="social">
+				<ul>
+					<li><a href="https://www.facebook.com/xscripts"><img src="images/icons/facebook.png" alt="Facebook"></a></li>
+					<li><a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a></li>
+					<li><a href="https://plus.google.com/share?url=http://www.albanx.com/ajaxuploader/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icons/gplus.png" alt="Google+"></a></li>
+					<li><a target="_blank" href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.albanx.com%2Fajaxuploader%2F&media=http%3A%2F%2Fwww.albanx.com%2Fajaxuploader%2Fimages%2Flogo.png&description=Real%20Ajax%20Uploader%20HTLM5" data-pin-do="buttonPin" data-pin-config="none"><img src="images/icons/ptrest.png" alt="Pinterest"></a></li>
+				</ul>
+			</div>
+		</header>
+		<section id="navigation">
+			<div class="span12">
+
+				<div class="row">
+					<nav>
+					<ul id="main-navigation" class="hidden-phone hidden-tablet">
+						<li><a href="index.html">How to setup</a></li>
+						<li><a href="options.html">Options and Methods</a></li>
+						<li  class="current-menu-item"><a href="changelog.html">Change log</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+					</ul>
+					</nav>
+				</div>
+			</div>
+		</section>			
+		<div id="content" class="entry portfolio-layout portfolio-3col gallery">
+
+<div class="row-fluid show-grid list">
+<div class="span12">
+
+	<h3>Version 3.0  - 31/10/2013</h3>
+	<ul>
+		<li>Upload.php with single class and pre configuration</li>
+		<li>Added check file exists on server</li>
+		<li>Added option to delete file after has been downloaded</li>
+		<li>Added exif information extract via Javascript on client side</li>
+		<li>Added override file option</li>
+		<li>3 of 5 themes added responsivity</li>
+		<li>Documentation update</li>
+		<li>Documentation with examples</li>
+		<li>Created distribute license</li>
+	</ul>
+	
+	<h3>Version 2.8  - 19/09/2013</h3>
+	<ul>
+		<li>Upload.php written with class and better approach, wrapped echos</li>
+		<li>ajaxupload.js added validateFile callback</li>
+		<li>AjaxUploader object prototype collide</li>
+	</ul>
+	
+	<h3>Version 2.7.4  - 30/08/2013</h3>
+	<ul>
+		<li>Fix html4 upload for basic browsers</li>
+		<li>Fix NaN error on file extension check</li>
+		<li>Changed regexpt file size check without regexp, for PHP 5.2 compatibility</li>
+		<li>Fix aspx thumb preview</li>
+	</ul>
+	
+	
+	<h3>Version 2.7.3</h3>
+	<ul>
+		<li>Fix beforeLoad bug function</li>
+	</ul>
+	
+	<h3>2.7.2</h3>
+	<ul><li>1. Fixed upload.aspx.cs bug on params</li></ul>
+
+<h3>2.7.1</h3>
+<ul>
+	<li>1. Added preview option</li>
+	<li>2. Fixed rare bug on upload.php</li>
+</ul>
+
+<h3>2.7</h3>
+<ul>
+	<li>1.Changed i18n variables, less redundancy</li>
+	<li>2.Remove old variables</li>
+	<li>3.Remove jquery sortalbe</li>
+	<li>4.Normalizzed some HTTP VARS names</li>
+	<li>5.Removed getUrl method and added getParams</li>
+	<li>6.Send data in POST with form data and flash, in GET with old ajax upload</li>
+</ul>
+
+<h3>Version 2.6.7</h3>
+<ul>
+	<li>1. Fix upload.aspx bug</li>
+</ul>
+
+<h3>Version 2.6.6</h3>
+<ul>
+	<li>1. Fix Opera &gt; 12.10 formdata bug, bypassed</li>
+</ul>
+
+<h3>Version 2.6.5</h3>
+<ul>
+	<li>1. Fix IE (flash) disable option</li>
+</ul>
+
+<h3>Version 2.6.4</h3>
+<ul>
+	<li>1. Fix the finish event with form integration</li>
+	<li>2. Added beforeSubmit event for intercepting and submiting form after finish event has run</li>
+</ul>
+
+<h3>Version 2.6.3</h3>
+<ul>
+	<li>1. Fix &amp; to url query former</li>
+</ul>
+
+<h3>Version 2.6.2</h3>
+<ul>
+	<li>1. Fix jQuery 1.9 $.browser</li>
+	<li>2. Added more check on Flash upload and request type POST</li>
+	<li>3. Client side check of the file size</li>
+	<li>4. Changed callback scopes to AU object</li>
+	<li>5. Changed file input name from Filedata (default of flash) to ax_file_input</li>
+	<li>6. Fix Chrome onchange "bug" event when selecting the same file</li>
+</ul>
+
+<h3>Version 2.6.1</h3>
+<ul>
+	<li>1.Fix IE autoStart upload</li>
+</ul>
+
+<h3>Version 2.6</h3>
+<ul>
+	<li>1. Added bootstrap theme support</li>
+	<li>2. Added more examples</li>
+	<li>3. Expand documentation</li>
+	<li>4. Fix minor bug on extension check</li>
+</ul>
+
+<h3>Version 2.5.5</h3>
+<ul>
+	<li>1. Fix formData bug on firefox</li>
+	<li>2. Fix some bug on upload.php</li>
+	<li>3. update upload.aspx.cs as done for upload.php before</li>
+</ul>
+
+<h3>Version 2.5.4</h3>
+<ul>
+	<li>1.Fix bug on older jquery version: $.data returns null, instead of undefined</li>
+	<li>2.Added formData upload if supported</li>
+	<li>3.Refactor of upload.php to handle uploads with less cases</li>
+</ul>
+	</div>
+</div>
+		</div>
+
+		
+		<div class="row" id="footer">
+			<div class="span12">
+				<div id="copyright"><p>&copy; 2013, <a href="http://www.albanx.com">www.albanx.com</a>, Alban Xhaferllari</p></div>
+			</div>
+		</div>
+		
+			
+	<!--  javascripts  -->
+	<script src="js/common.js"></script><!--   custom scripts  -->
+	</div>
+	<div class="spacer"></div>
+
+	<script type="text/javascript">
+	 window.prettyPrint && prettyPrint();
+	</script>
+</body>
+</html>

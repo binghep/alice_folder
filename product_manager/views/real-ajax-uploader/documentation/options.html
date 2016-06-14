@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+	<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+	<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+	<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	
+	<head>
+		<!-- site charset -->
+		<meta charset="utf-8">
+		<title>Real Ajax Uploader</title>
+		<meta name="keywords" content="ajax uploader, html5 uploader, image uploader, chunk upload, multiple upload, HTML5, ajax,XML,JavaScript">
+		<meta name="description" content="Html5 multiple file uploader">
+		<meta name="author" content="Alban Xhaferllari">
+		
+		<!--  Stylesheets -->
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Twitter Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css"> <!-- Twitter Bootstrap (responsive) -->
+		<link rel="stylesheet" href="style.css"> <!-- main stylesheet -->
+		<link rel="stylesheet" href="css/style-responsive.css"> <!-- main stylesheet (responsive) -->
+		<!-- PACK-theme -->
+		<!-- PACK-font -->
+		<!--  Meta  -->
+		
+		<!-- favicons for the site  -->
+
+		<!--  Device viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<!--  HTML5 for older browsers -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--  IE8 fixes -->
+		<!--[if IE 8]>
+			<link rel="stylesheet" href="css/ie8.css">
+		<![endif]-->
+		<link rel="stylesheet" href="css/theme-options.css">
+		
+		<script src="js/jquery.min.js"></script> <!--  jQuery  -->
+		<script src="js/bootstrap.min.js"></script> <!--  bootstrap  -->
+		
+		<script>
+		if (top.location != location) {
+		    top.location.href = document.location.href ;
+		}
+		</script>
+
+
+		<script type="text/javascript" src="js/prettify.js"></script>
+		<link rel="stylesheet" href="css/prettify.css">
+		<style>
+			.example-box 
+			{
+				background: #42B7ED;
+				border-radius:5px;
+				text-align:center;
+				padding:5px;
+			}
+		</style>
+	</head>
+	
+<body>
+	<!-- GO TO TOP BUTTON -->
+	<div id="totop" class="hidden-phone hidden-tablet"><a class="btn btn-inverse">^</a></div>
+	<div class="container" id="main-container">
+	
+		<header>
+			<h1 id="logotype"><a href="index.php"><img src="images/logo.png" alt="Real Ajax Uploader logo"></a></h1>
+			<div id="social">
+				<ul>
+					<li><a href="https://www.facebook.com/xscripts"><img src="images/icons/facebook.png" alt="Facebook"></a></li>
+					<li><a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a></li>
+					<li><a href="https://plus.google.com/share?url=http://www.albanx.com/ajaxuploader/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icons/gplus.png" alt="Google+"></a></li>
+					<li><a target="_blank" href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.albanx.com%2Fajaxuploader%2F&media=http%3A%2F%2Fwww.albanx.com%2Fajaxuploader%2Fimages%2Flogo.png&description=Real%20Ajax%20Uploader%20HTLM5" data-pin-do="buttonPin" data-pin-config="none"><img src="images/icons/ptrest.png" alt="Pinterest"></a></li>
+				</ul>
+			</div>
+		</header>
+		<section id="navigation">
+			<div class="span12">
+
+				<div class="row">
+					<nav>
+					<ul id="main-navigation" class="hidden-phone hidden-tablet">
+						<li><a href="index.html">How to setup</a></li>
+						<li  class="current-menu-item"><a href="options.html">Options and Methods</a></li>
+						<li><a href="changelog.html">Change log</a></li>
+						<li ><a href="faq.html">FAQ</a></li>
+					</ul>
+					</nav>
+				</div>
+			</div>
+		</section>			
+		<div id="content" class="entry portfolio-layout portfolio-3col gallery">
+
+
+	<div class="span12">
+				<div id="page-title">
+					<h2>Documentation</h2>
+					<p class="subtitle">Full documentation and options</p>
+					<div class="clear"></div>
+				</div>
+			</div><div class="row-fluid">
+	<div class="span2">
+		<ul id="left_menu_doc" class="nav nav-list bs-docs-sidenav" style="top:50px;">
+	          <li class="active"><a href="#options"> All Options <i class="icon-chevron-right pull-right"></i></a></li>
+	          <li><a href="#methods"> Methods <i class="icon-chevron-right pull-right"></i></a></li>
+	          <li><a href="#forms"> Form Integration <i class="icon-chevron-right pull-right"></i></a></li>
+	          <li><a href="#howit"> How it works <i class="icon-chevron-right pull-right"></i></a></li>
+	          <li><a href="#styling"> CSS style <i class="icon-chevron-right pull-right"></i></a></li>
+	          <li><a href="#classes"> CSS classes <i class="icon-chevron-right pull-right"></i></a></li>
+	          <li><a href="#nojs"> No JS fallback <i class="icon-chevron-right pull-right"></i></a></li>
+		</ul>
+	</div>
+
+<div class="span10">
+
+<h2 id="options">Options:</h2>
+
+<table class="table table-striped table-bordered doc-table">
+<thead>
+	<tr>
+		<th>Option</th>
+		<th>Type</th>
+		<th>Default</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>maxFileSize</td>
+		<td>String</td>
+		<td>'10M'</td>
+		<td> <p> <b>String:</b> Set the maximum file size allowed for upload. Use as string to indicate unity: 500K for kylobytes, 10M for megabytes, 2G for gigabytes.</p></td>
+	</tr>
+	
+	<tr>
+		<td>remotePath</td>
+		<td>String, Function</td>
+		<td>''</td>
+		<td> <p> <b>String:</b> If given as string specify the remote (server side) path where to upload the file. <br>
+			 <b>Function:</b> In given as function must return the remote upload path as string.
+			This function is excecuted on the start upload event, so the upload path is calculated when Upload button is pressed. Can be usefull when path is calculated
+			by any user choise (ex. form compilation).</p></td>
+	</tr>
+	
+	<tr>
+		<td>url</td>
+		<td>String</td>
+		<td>upload.php</td>
+		<td>The url action for the upload on server. More data can be pass in GET to the url: upload.php?customkey=customval</td>
+	</tr>
+	
+	<tr>
+		<td>flash</td>
+		<td>String</td>
+		<td>uploader.swf</td>
+		<td>The path of the flash swf file for no-HTML5 browser, multiupload support</td>
+	</tr>
+	
+	
+	<tr>
+		<td>data</td>
+		<td>String, Function, Object</td>
+		<td>''</td>
+		<td> <b>String</b>: If given as string is used for sending additional parameters in GET to the php script. 
+		<br> <b>Function</b>: If given as function must return a url formated string. This function is excecuted on the start upload event, 
+			so the data are created when Upload button is pressed. Can be usefull when need to send more data depending on user choise.	
+			<b>Json Object</b>: If given as object must have this format {getvar:value, anothergetvar:value....}. This is similar to jQuery Ajax data.</td>
+	</tr>
+	
+	<tr>
+		<td>async</td>
+		<td>Boolean</td>
+		<td>true</td>
+		<td>If true file uploads are made asyncronyos in parallel. If false files are uploaded one by one. Default to false for not html5 browsers</td>
+	</tr>
+	
+	<tr>
+		<td>maxFiles</td>
+		<td>Int</td>
+		<td>9999</td>
+		<td>Maxixum number of files that can be selected at once.</td>
+	</tr>
+
+	<tr>
+		<td>allowExt</td>
+		<td>array</td>
+		<td>[]</td>
+		<td>An array containing the type of file extension that can be uploaded or selected. If empty all type of files can be selected. Recommended to be set on server side for security reasons.</td>
+	</tr>
+	
+	<tr>
+		<td>enable</td>
+		<td>Boolean</td>
+		<td>true</td>
+		<td>If set to false plugin start in disabled mode, in case one want to active upload later (using API functions) under certain conditions.</td>
+	</tr>
+	
+	<tr>
+		<td>chunkSize</td>
+		<td>Int</td>
+		<td>1024*1024</td>
+		<td>When uploading big files with html5 for perfomance reason is better to upload files by chunks. With this option set
+		the size of chunk to upload. Defaul is 1Mb. Avaiable only for browsers that support slice File Api. Set to 0 if want to send all file at once.</td>
+	</tr>
+	
+	<tr>
+		<td>dropColor</td>
+		<td>string</td>
+		<td>red</td>
+		<td>Set the background color of the drop area during the upload by drag and drop. Can use #FFF values or RGB that css accept values.</td>
+	</tr>	
+	
+	<tr>
+		<td>dropClass</td>
+		<td>string</td>
+		<td>red</td>
+		<td>Set the css class of the drop area during the upload by drag and drop. </td>
+	</tr>
+	
+	<tr>
+		<td>dropArea</td>
+		<td>jQuery selector/DOM element</td>
+		<td>self</td>
+		<td>Set the drag and drop area for files. Defaul the area is the initial container. Example can be set to <i>dropArea:$('.class')</i>.</td>
+	</tr>	
+	
+	<tr>
+		<td>maxConnections</td>
+		<td>Int</td>
+		<td>3</td>
+		<td>Set the maximum number of parallel file uploads. Avaiable only for browsers that support XmlHttpRequest File Upload. Maximum connections supported
+			on Firefox are 6.</td>
+	</tr>
+	
+	<tr>
+		<td>autoStart</td>
+		<td>boolean</td>
+		<td>false</td>
+		<td>If true upload of files will start imediately after file choose.</td>
+	</tr>
+	
+	<tr>
+		<td>thumbHeight</td>
+		<td>int</td>
+		<td>0</td>
+		<td>Set the max height of thumbnial images to be generated on server side.</td>
+	</tr>
+	<tr>
+		<td>thumbWidth</td>
+		<td>int</td>
+		<td>0</td>
+		<td>Set the max width of thumbnial images to be generated on server side.</td>
+	</tr>
+	
+	<tr>
+		<td>thumbPostfix</td>
+		<td>string</td>
+		<td>_thumb</td>
+		<td>Set the postfix of filenames of images.</td>
+	</tr>
+	
+	<tr>
+		<td>thumbPath</td>
+		<td>string</td>
+		<td>same as remotePath</td>
+		<td>set the path where thumbs should be saved, if empty path setted as remotePath.</td>
+	</tr>
+	
+	<tr>
+		<td>thumbFormat</td>
+		<td>String/Enum</td>
+		<td>Same as original image</td>
+		<td>Set the thumbnial format output image. Possible values jpg, gif and png</td>
+	</tr>
+	
+	<tr>
+		<td>form</td>
+		<td>String/ DOM,jQuery Object</td>
+		<td>null</td>
+		<td>Set the form to integrate with uploader. The file will be uploaded on form submit (like gmail attachments). <br>
+			<b>1.String:</b> Can set a jquery selector, example <i>#formId</i> <br>
+			<b>2.String:</b> If set as <i>parent</i> (form:'parent') it will try to find a parent form in the DOM tree.<br>  
+			<b>jQuery Selector:</b> Point to a form with a jQuery selector example $('#form_id')
+		</td>
+	</tr>
+	
+	<tr>
+		<td>editFilename</td>
+		<td>boolean</td>
+		<td>false</td>
+		<td>If set true, allow the editing of file names before upload. Doubleclick on the file name and a text input will appear. On blur it will set the file name. 
+			Does not allow extension change.</td>
+	</tr>
+	
+	<tr>
+		<td>sortable</td>
+		<td>boolean</td>
+		<td>false</td>
+		<td>If set true, allow to sort the list of files before upload them, need jquery-ui.js . It is not usefull. Will be removed on the next versions</td>
+	</tr>
+		
+	<tr>
+		<td>language</td>
+		<td>String</td>
+		<td>auto</td>
+		<td>Used for translation the plugins strings. For the moment are avaible English, Italian, German, Francis, Netherland and Albanian translations.
+			Set to <i>auto</i> for autodetecting the browser language, or use ISO codes for the avaiable languages: en_EN, it_IT, de_DE, nl_NL, fr_FR and
+			sq_AL</td>
+	</tr>
+	
+	<tr>
+		<td>uploadDir</td>
+		<td>Boolean</td>
+		<td>false</td>
+		<td>Experimental feature. Works only on Google Chrome. Allow to select a directory and upload all its files.</td>
+	</tr>
+	
+	<tr>
+		<td>removeOnSuccess</td>
+		<td>Boolean</td>
+		<td>false</td>
+		<td>Set to remove file from the list when it has beed uploaded.</td>
+	</tr>
+	
+	<tr>
+		<td>removeOnError</td>
+		<td>Boolean</td>
+		<td>false</td>
+		<td>Remove the file from the list if it has returned any uploaded error and has not been uploaded correctly.</td>
+	</tr>
+	
+	<tr>
+		<td>bootstrap</td>
+		<td>Boolean</td>
+		<td>false</td>
+		<td>If true, to all buttons and elements will be added the Bootstrap classes, and if css bootstrap theme is included in the 
+		html document then the uploaded will have a bootstrap theme.</td>
+	</tr>
+	
+	<tr>
+		<td>allowDelete</td>
+		<td>Boolean</td>
+		<td>false</td>
+		<td>If true, files can be delete after upload. An upload button will appear for each file when 
+		it has been uploaded. Enable with combination on upload.php/upload.aspx for caution.</td>
+	</tr>
+		
+	<tr>
+		<td>overrideFile</td>
+		<td>Boolean</td>
+		<td>false</td>
+		<td>If set to true existing file with same name will be override on server, false files are renamed.</td>
+	</tr>
+		
+	<tr>
+		<td>checkFileExists</td>
+		<td>Boolean</td>
+		<td>false</td>
+		<td>If set to true user will be warned to continue upload or not when file already exists on server.
+			Use in combination with override option.</td>
+	</tr>
+</tbody>
+</table>
+
+
+<h2 id="methods">Events, Callbacks:</h2>
+<table class="table table-striped table-bordered doc-table">
+	<thead>
+		<tr>
+			<th>Function</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>onInit</td>
+			<td>function(AU Object)</td>
+			<td></td>
+			<td>This function is run when on uploader initialization. Usefull if on init need to hide uploader elements (such as upload button or remove button)
+			without editing the css. The AU parameter is the uploader instance class. For more details see the advance topic.</td>
+		</tr>	
+		
+		<tr>
+			<td>onSelect</td>
+			<td>function(Array files)</td>
+			<td></td>
+			<td>This function is trigger after files has been selected. It returns the array of selected files that has passed validation.</td>
+		</tr>
+	
+		<tr>
+			<td>beforeUpload</td>
+			<td>function(String filename)</td>
+			<td>return true</td>
+			<td>This function is trigger before every single file get uploaded. If this return false then the upload of the file does not start. Can be used
+				when users need specific validation on file to get them uploaded</td>
+		</tr>
+		
+		<tr>
+			<td>beforeUploadAll</td>
+			<td>function(Array files)</td>
+			<td>return true</td>
+			<td>This function is trigger Upload All button is pressed. If this return false then the upload of all files will not start. Can be used to validate
+				any condition before upload all files.</td>
+		</tr>
+		
+		<tr>
+			<td>success</td>
+			<td>function(String file_name)</td>
+			<td>null</td>
+			<td>A function that is trigger every time a file is uploaded successfully. Return the uploaded file name .</td>
+		</tr>
+			
+		<tr>
+			<td>finish</td>
+			<td>function(Array filesName, Array fileObjects)</td>
+			<td>null</td>
+			<td>This function is trigger when all files finish uploading. Returns an array with the file names and the array of the file objects ( for more see
+			<a href="#advanced">Advance api</a>).</td>
+		</tr>
+		
+		<tr>
+			<td>error</td>
+			<td>function(String err, String fileName)</td>
+			<td>null</td>
+			<td>Function that is trigger when there is an error on uploading file. Returns error text and the file name. Error can be trigger also from the validateFile
+			callback.</td>
+		</tr>
+		
+		<tr>
+			<td>validateFile</td>
+			<td>function(String name, String extension, Int size)</td>
+			<td>null</td>
+			<td>This funciton is called for each selected files, at the moment they are selected. This is similar to the onSelect callback, except that 
+			 this is called for all selected files, and user can validate here a file. If this function return a error string the file will not be added to the list
+			 and the error string return will be catched by the error event.</td>
+		</tr>
+		
+		<tr>
+			<td>fileInfo</td>
+			<td>function(exifDaat)</td>
+			<td>
+			function(oData)
+			{
+			    var strPretty = "";
+			    for (var a in oData) {
+			        if (oData.hasOwnProperty(a)) {
+			            if (typeof oData[a] == "object") {
+			                strPretty += a + " : [" + oData[a].length + " values]\r\n";
+			            } else {
+			                strPretty += a + " : " + oData[a] + "\r\n";
+			            }
+			        }
+			    }
+			    alert(strPretty);
+			}
+			</td>
+			<td>This function is called when the (i) button is pressed. This returns exif data for images.
+				Works only on JPG file. Can be useful when need to extrac information for photos taken with 
+				camera or smartphones, for example for GPS data.</td>
+		</tr>
+		
+
+	</tbody>
+</table>
+
+<h2 id="methods">Methods, API:</h2>
+<table class="doc-table table table-striped table-bordered">
+<thead>
+	<tr>
+		<th>Method</th>
+		<th>Description</th>
+		<th>Example</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>destroy</td>
+		<td>Destroys the ajaxupload.</td>
+		<td>$('.demo').ajaxupload('destroy')</td>
+	</tr>
+	<tr>
+		<td>option</td>
+		<td>Set or get the options of the ajaxupload.</td>
+		<td>getter: $('.demo').ajaxupload('option',allowExt)
+			setter:$('.demo').ajaxupload('option',allowExt,['jpg','gif'])</td>
+	</tr>
+	<tr>
+		<td>enable</td>
+		<td>Enable the plugin the ajaxupload plugin if it has been disabled.</td>
+		<td>$('.demo').ajaxupload('enable')</td>
+	</tr>
+	
+	<tr>
+		<td>disable</td>
+		<td>Disables the plugin.</td>
+		<td>$('.demo').ajaxupload('disable')</td>
+	</tr>
+
+	<tr>
+		<td>start</td>
+		<td>A function to call for starting upload from other points of code, ie: on some extrenal button click.</td>
+		<td>$('.demo').ajaxupload('start') starts uploading of selected files.</td>
+	</tr>	
+	
+	<tr>
+		<td>clear</td>
+		<td>A function to call for clearing the queue of files ready to upload from other points of code, ie: on some extrenal button click.</td>
+		<td>$('.demo').ajaxupload('clear') clear the list of selected files.</td>
+	</tr>	
+	
+	<tr>
+		<td>getAllowedExt</td>
+		<td>Return the allowed extension setting.</td>
+		<td>$('.demo').ajaxupload('getAllowedExt')</td>
+	</tr>
+
+	<tr>
+		<td>getFiles</td>
+		<td>Return the selected files array with name, size, status and more.</td>
+		<td>$('.demo').ajaxupload('getFiles')</td>
+	</tr>		
+
+</tbody>
+</table>
+
+
+
+
+<h2 id="forms">How to integrate with forms:</h2>
+
+	<h4>Method 1: set to the uploader form DOM ID or selector</h4>
+<div class="doc-box" style="padding-left:25px;">
+	<p>Example form:</p>
+		<pre class="prettyprint linenums">
+&lt;form class=&quot;form-horizontal&quot; action=&quot;test.php&quot; target=&quot;_self&quot; id=&quot;contactform&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;inputEmail&quot; placeholder=&quot;Email&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;inputName&quot; placeholder=&quot;Name&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Send&lt;/button&gt;	
+&lt;/form&gt;	</pre>
+	<p>Uploader can setup, in any place:</p>
+	
+			<pre class="prettyprint linenums">
+&lt;div id=&quot;uploader_div&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$('#uploader_div').ajaxupload({
+url:'upload.php',
+remotePath:'example1/',
+form:'#contactform'
+});			</pre>
+<p>The <i>form</i> option of the uploader has been set to the ID of the form we need to integrate. This methods does not need to edit your existing forms.</p>			
+</div>
+
+
+<h3>Method 2: set the uploader inside the form tags</h3>
+<div class="doc-box" style="padding-left:25px;">
+	<p>Example form:</p>
+		<pre class="prettyprint linenums">
+&lt;form class=&quot;form-horizontal&quot; action=&quot;test.php&quot; target=&quot;_self&quot; id=&quot;contactform&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;inputEmail&quot; placeholder=&quot;Email&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;inputName&quot; placeholder=&quot;Name&quot;&gt;
+&lt;div id=&quot;uploader_div&quot;&gt;&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Send&lt;/button&gt;	
+&lt;/form&gt;	</pre>
+	<p>Uploader can setup, in any place, but the uploader container should be inside the form tags:</p>
+	
+			<pre class="prettyprint linenums">
+&lt;script type=&quot;text/javascript&quot;&gt;
+$('#uploader_div').ajaxupload({
+url:'upload.php',
+remotePath:'example1/',
+form:'paret'
+});			</pre>	
+					
+	<p>The <i>form</i> option of the uploader has been set to 'parent'. In this case you need to insert the uploader div inside the form tags, at the wanted
+	position.</p>			
+
+	<p><strong>NOTE: when integrating with a form and using option 1, be sure to call the ajax uploader after, the form element or
+		on document ready event.</strong></p>
+</div>
+
+<h3>How form integration interact with the uploader</h3>
+<div class="doc-box" style="padding-left:25px;">
+	<ul class="doc-list">
+		<li>The submit event of the form is captured and stop by the uploader</li>
+		<li>The files start uploading</li>
+		<li>After all files are uploaded, to the original form are appended as many hidden inputs as the number of uploaded file.
+			These inputs has the name <i>ax-uploaded-files[]</i>, so on server side (PHP or ASPX) are sended the file names(full path)</li>
+		<li>After this, the original form is submited and all the above file name are sended</li>
+	</ul>
+</div>
+
+
+<h2 id="howit">How Real Ajax Uploader works:</h2>
+<div class="doc-box" style="padding-left:25px;">
+	<p> This jQuery plugin detect if <a href="https://developer.mozilla.org/en/Using_files_from_web_applications#Handling_the_upload_process_for_a_file">
+	XmlHttpRequest upload</a> is supported as described on mozilla web site. This type of upload is supported by Firefox 3.6+, Safari 4+ and Chrome 4+. 
+	If html5 upload is not supported then flash is used . As well if flash is disabled then html4 standard upload is used.<br>
+	<b>HTML5 -&gt; FLASH -&gt; HTML4.</b> <br>
+	The suppport detect is done
+	by detecting the support of the feature not detecting the browser. Actually Opera 11, Internet Explorer 9 does not support XmlHttpRequest upload but it seems that IE 10 
+	will support it.</p>
+	
+	<p> When selecting files a preview image of the file is display. If image type is JPEG, GIF, or PNG a real preview of image is show if 
+	this features is supported
+	<a href="https://developer.mozilla.org/en/Using_files_from_web_applications#Example:.C2.A0Showing_thumbnails_of_user-selected_images">as described here</a>.
+	For other type of files or if image preview is not supported by the browser, a custom icon is shown to identify the type of file being uploaded. This icons
+	can be configured and extended for each type of files by changing the css styles.</p>
+</div>
+
+
+<h2 id="styling">CSS styling</h2>
+<div class="doc-box" style="padding-left:25px;">
+	<p>All style of plugin is based on CSS and some png images. Other css themes will be build and added to the plugin
+	for free. All images, elements, buttons and divs created by the plugins have a CSS class.
+	They can be simply viewed by looking and source code generated. Using this classes or changeing the CSS file all style can be customized.</p>
+	<p>By default Real Ajax Uploader has 5 themes:</p>
+	<ul class="doc-list">
+		<li>Base theme (css/baseTheme/style.css) with round buttons and big icons, responsive</li>
+		<li>Classic theme (css/classicTheme/style.css) with normal buttons, responsive </li>
+		<li>Bootstrap theme (css/bootstrapTheme/style.css) a bootstrap base color theme, responsive</li>
+		<li>List theme (css/listTheme/style.css) with black-white icons, responsive</li>
+		<li>Fancy theme (css/fancyTheme/style.css) </li>
+	</ul>
+	<p>Every theme can be customized and new theme can be added with css.</p>
+</div>
+
+
+
+<h2 id="classes">CSS classes</h2>
+<div class="doc-box" style="padding-left:25px;">
+	<p>Every single element on the ajax uploader has a class, that starts by ax-CLASSNAME. This classes are use to style the uploader with the varius themes.</p>
+	<p>The list of classes uses for each element:</p>
+	<ul class="doc-list">
+		<li>ax-uploader: the class added automatically to the uploader div</li>
+		<li>ax-main-title: class use by the main title, can be used to hide the title</li>
+		
+		<li>ax-browse-c: class used to style the browse button</li>
+		<li>ax-upload-all: class used by the Upload All button</li>
+		<li>ax-clear: for the Clear button</li>
+		<li>ax-file-list: the clas applied the UL tag of file list</li>
+		
+		<li>ax-prev-container: Class of the preview container</li>
+		<li>ax-preview: Class of the preview image inside the container</li>
+		<li>ax-button: class used by all button for the common settings</li>
+		<li>ax-upload: the single upload button</li>
+		<li>ax-remove: the single clear button</li>
+		<li>ax-file-name : the file name area</li>
+		<li>ax-file-size: file size area</li>
+		<li>ax-toolbar: class added to the container of the buttons</li>
+	</ul>
+</div>	
+
+<h2 id="nojs">No javascript support fallback</h2>
+<div class="doc-box" style="padding-left:25px;">
+<p>If you want to support browsers where javascript is not enabled then when creating the uploader just create a normal upload form
+where the action point to the upload.php/upload.aspx file and the upload file inputs named ax-files. Real example:
+	<pre class="prettyprint linenums">
+	&lt;!-- Create an iframe for ajax-like not-reloading-page upload  --&gt;
+	&lt;iframe name=&quot;ax-main-frame&quot; style=&quot;display:none;&quot;&gt;&lt;/iframe&gt;
+	
+	&lt;!-- Create the  form: note the action value  --&gt;
+	&lt;form id=&quot;uploader_fall&quot; action=&quot;upload.php&quot; method=&quot;post&quot; encType=&quot;multipart/form-data&quot;&gt;
+	
+	&lt;!-- Set upload Path and other options --&gt;
+	&lt;input type=&quot;hidden&quot; value=&quot;example9/&quot; name=&quot;ax-file-path&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; value=&quot;100M&quot; name=&quot;ax-maxFileSize&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; value=&quot;jpg|gif|png&quot; name=&quot;ax-allow-ext&quot; /&gt;
+	&lt;input type=&quot;file&quot; name=&quot;ax_file_input&quot; /&gt;
+	
+	&lt;!-- If need to generate thumbnail then set this option as hidden input --&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;ax-thumbHeight&quot; value=&quot;100&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;ax-thumbWidth&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;ax-thumbPostfix&quot; value=&quot;_thumb&quot;/&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;ax-thumbPath&quot; value=&quot;uploads/thumbs/&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;ax-thumbFormat&quot; value=&quot;png&quot; /&gt;
+		
+		
+	&lt;input type=&quot;submit&quot; value=&quot;Upload&quot; /&gt;
+	&lt;/form&gt;
+
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		$('#uploader_fall').ajaxupload({
+			url:'upload.php',
+			uploadPath:'example9/'
+		});
+	&lt;/script&gt;
+
+	&lt;!-- Create the  form: note the action value  --&gt;
+	&lt;form id=&quot;upload_with_fallback&quot; action=&quot;upload.php&quot; method=&quot;post&quot; target=&quot;ax-main-frame&quot; encType=&quot;multipart/form-data&quot;&gt;
+
+	</pre>
+</div>
+	
+<h2 id="advanced">AU Objec Class and adavance usage</h2>
+<div class="doc-box" style="padding-left:25px;">
+<p>The Real Ajax Uploader is written with Javascript object (prototype) and has two main classes: the AjaxUploader class and the fileObject class.
+The <b>AjaxUploader</b> is the main class and holds all the reference and status the selected files, buttons, css and api-s. This class is added to the DOM
+element with the jQuery.data method, so It can be access and manipulated in real time after the uploader has been created:</p>
+<pre class="prettyprint linenums">
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		$('#uploader_div').ajaxupload();//create the ajax uploader
+		var AU = $('#uploader_div').data('AU');
+	&lt;/script&gt;
+</pre>
+</div>
+
+
+<h2>AjaxUploader Class methods and proprieties:</h2>
+<div class="doc-box" style="padding-left:25px;">
+	<ul class="doc-list">
+		<li><strong>AU.hasHtml4</strong> : boolean tells if basic upload is supported</li>
+		<li><strong>AU.hasAjaxUpload</strong>  : boolean tells if html5 ajax upload is supported</li>
+		<li><strong>AU.hasFlash</strong>  : boolean tells if flash is installed for upload</li>
+		<li><strong>AU.files</strong> : the list of files Object with the status and properties</li>
+		<li><strong>AU.fieldSet</strong> : the container html element of the uploader, usefull if need to hide or change any inner element</li>
+		<li><strong>AU.browse_c</strong> : the browse html (in jquery object) button that open the select file dialog window.</li>
+		<li><strong>AU.uploadFiles</strong> : the upload html all button, usefull if you need to hide this button on the fly without editing the css</li>
+		<li><strong>AU.removeFiles</strong> : the remove html button usefull if you need to hide this button on the fly without editing the css</li>
+		<li><strong>AU.fileList</strong> : the UL list view with the selected files</li>
+		<li><strong>AU.uploadAll()</strong> : function that starts uploading all files</li>
+		<li><strong>AU.clearQueue()</strong> : function that remove all files from the queue (and from the list)</li>
+		<li><strong>AU.removeFile(pos)</strong> : removes a file from the list of files, pos: the position of file in the array.</li>
+	</ul>
+</div>
+
+<h2>fileObject Class methods and proprieties:</h2>
+<div class="doc-box" style="padding-left:25px;">
+	The <strong>fileObject</strong> class holds all the information, status, buttons, progress of the single file. This object is created 
+	for every selected file and is added the the AU object queue (AU.files, the list of files objects):
+	<pre class="prettyprint linenums">
+		&lt;script type=&quot;text/javascript&quot;&gt;
+			var AU = $('#uploader_div').data('AU');
+			var file_list = AU.files;//get all the files object
+			var file = file_list[0]; //a single fileObject
+		&lt;/script&gt;
+	</pre>
+	
+	<p>fileObject methods and proprieties:</p>
+	<ul class="doc-list">
+		<li><strong>fileObject.file</strong>: the DOM file object</li>
+		<li><strong>fileObject.currentByte</strong>: the current number of bytes uploaded</li>
+		<li><strong>fileObject.status</strong>: the status of the file:0 ready, -1 error, 1 uploaded</li>
+		<li><strong>fileObject.name</strong>: file name</li>
+		<li><strong>fileObject.xhr</strong>: the XmlHttpRequest/Form DOM objects that upload the file</li>
+		<li><strong>fileObject.info</strong>: file info aboust status</li>
+		<li><strong>fileObject.ext</strong>: file extension</li>
+		<li><strong>fileObject.info</strong>: file info aboust status</li>
+		<li><strong>fileObject.pos</strong>: file position the in the queue (AU.files)</li>
+		<li><strong>fileObject.AU</strong>: a reference to the AU class</li>
+		
+		<li style="margin-top:10px;">All the follwing properties can be used to access visual elements, hide and change them on the fly</li>
+		<li><strong>fileObject.prevContainer</strong>: image preview container dom element</li>
+		<li><strong>fileObject.prevImage</strong>: preview image dom element</li>
+		<li><strong>fileObject.details</strong>: file info container dom element</li>
+		<li><strong>fileObject.nameContainer</strong>: name dom container</li>
+		<li><strong>fileObject.sizeContainer</strong>: file size span container</li>
+		<li><strong>fileObject.progressInfo</strong>: progress info container</li>
+		<li><strong>fileObject.progressBar</strong>: progres bar</li>
+		<li><strong>fileObject.progressPer</strong>: progress in percent container</li>
+		<li><strong>fileObject.buttons</strong>: button container</li>
+		<li><strong>fileObject.uploadButton</strong>: upload button dom element</li>
+		<li><strong>fileObject.removeButton</strong>: remove button dom element</li>
+	</ul>
+	<p>All the other methods and propriets of AjaxUploader class and of the fileObject class that are not documented here is because they are just private method not recommended to be used.</p>
+</div>
+
+
+<h2 id="bootstrap">Bootstrap Theme</h2>
+<p>In the version 2.6 bootstrap theme support was added. Bootstrap provide a standard, responsive way of html5 web design.
+To use the bootstrap theme just load the bootstrap css and the ajax uploader bootstrap theme. For more see example 9.</p>
+
+
+</div>
+</div>
+
+
+<script>
+var list = $('#left_menu_doc li');
+list.click(function(){
+	list.removeClass('active');
+	$(this).addClass('active');
+});
+</script>
+		</div>
+
+		
+		<div class="row" id="footer">
+			<div class="span12">
+				<div id="copyright"><p>&copy; 2013, <a href="http://www.albanx.com">www.albanx.com</a>, Alban Xhaferllari</p></div>
+			</div>
+		</div>
+		
+			
+	<!--  javascripts  -->
+	<script src="js/common.js"></script><!--   custom scripts  -->
+	</div>
+	<div class="spacer"></div>
+
+	<script type="text/javascript">
+	 window.prettyPrint && prettyPrint();
+	</script>
+</body>
+</html>

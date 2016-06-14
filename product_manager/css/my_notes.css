@@ -1,0 +1,173 @@
+  .grid .fpItem .itemImageAndName {
+    font-family: "Open Sans Semibold", "Open Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    /*padding: 10px 10px 7px 10px;*/
+    padding:0px 10px 0px 10px;
+    position: relative;
+    cursor: pointer;
+    height: 218px;
+}
+
+ .fpGridBox {
+    color: #999;
+    margin-bottom: 10px;
+    width: 163px;
+    float: left;
+    margin-right: 5px;
+}
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.grid .fpItem {
+    height: 300px;
+    /*height: 330px;*/
+    height: 354px;
+    position: relative;
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  {
+    font-weight: 600;
+}
+/*@media (max-width: 1115px)
+#mainColumn  div.fpGridBox {
+    width: 148px;
+    float: left;
+    margin-right: 5px;
+}
+@media (max-width: 1235px)
+#mainColumn  div.fpGridBox {
+    width: 148px;
+    float: left;
+    margin-right: 5px;
+}*/
+.fpGridBox:nth-of-type(2),  .fpGridBox:nth-of-type(3),  .fpGridBox:nth-of-type(4), .fpGridBox:nth-of-type(5) {
+    display: block;
+}
+.fpGridBox {
+    border-color: #c7c7c7;
+    border-style: solid;
+    border-width: 1px 1px 3px 1px;
+    border-radius: 4px;
+    background-color: #fff;
+
+}
+.fpGridBox:hover {
+    border-color: #b3b3b3;
+}
+
+/*Method 1: image not as background:
+.itemImageAndName img {
+    border: none;
+    max-width: 125px;
+    max-height: 125px;
+    display: block;
+    margin: 0 auto;
+}*/
+/*.itemImageAndName>a>div.imageContainer {
+    border: none;
+    max-width: 125px;
+    max-height: 125px;
+    display: block;
+    margin: 0 auto;
+}*/
+ .fpGridBox a {
+    color: #0072bc;
+}
+.itemImageAndName {
+    height: 133px;
+    width: 180px;
+    display: table-cell;
+    vertical-align: middle;
+}
+  </style>
+
+<style type="text/css">
+.gridHeading {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.grid .fpItem .itemInfoLine {
+   	border-top:1px solid #e5e5e5;
+    color: #999;
+    display: block;
+    /*height: 45px;*/
+    height: 28px;
+    padding: 6px 10px 0 10px;
+    position: relative;
+}
+.competitors{
+	border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+.grid .fpItem .priceLine .itemPrice {
+    font-family: "Open Sans Bold", "Open Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #60a430;
+    font-size: 15px;
+    max-width: 100px;
+    line-height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+.align_left{
+	text-align: left;
+	border-right:1px solid #CECECE;
+
+	color:black;
+}
+.align_right{
+	text-align: right;
+	
+	color: black;
+    font-weight: bold;
+}
+td{
+	font-family: "Open Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    color: #999;
+}
+.research_note{
+	padding: 6px 10px 0 10px;
+}
+.competitors table td{
+	padding: 3px 10px 3px 10px;
+}
+
+#gridContainer{
+	margin-left: 10px;
+    margin-right: 10px;
+}
+
+.imageContainer{
+	width: 125px;
+	height:125px;
+	margin:0 auto;
+	background-size: 100% 100%!important;/*shrink image to fit div*/
+}
+
+.summary_note{
+	display:inline;
+	color: hotpink;
+}
+.info_icon{
+	display:inline;
+}

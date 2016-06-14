@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+	<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+	<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+	<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	
+	<head>
+		<!-- site charset -->
+		<meta charset="utf-8">
+		<title>Real Ajax Uploader</title>
+		<meta name="keywords" content="ajax uploader, html5 uploader, image uploader, chunk upload, multiple upload, HTML5, ajax,XML,JavaScript">
+		<meta name="description" content="Html5 multiple file uploader">
+		<meta name="author" content="Alban Xhaferllari">
+		
+		<!--  Stylesheets -->
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Twitter Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css"> <!-- Twitter Bootstrap (responsive) -->
+		<link rel="stylesheet" href="style.css"> <!-- main stylesheet -->
+		<link rel="stylesheet" href="css/style-responsive.css"> <!-- main stylesheet (responsive) -->
+		<!-- PACK-theme -->
+		<!-- PACK-font -->
+		<!--  Meta  -->
+		
+		<!-- favicons for the site  -->
+
+		<!--  Device viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<!--  HTML5 for older browsers -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--  IE8 fixes -->
+		<!--[if IE 8]>
+			<link rel="stylesheet" href="css/ie8.css">
+		<![endif]-->
+		<link rel="stylesheet" href="css/theme-options.css">
+		
+		<script src="js/jquery.min.js"></script> <!--  jQuery  -->
+		<script src="js/bootstrap.min.js"></script> <!--  bootstrap  -->
+		
+		<script>
+		if (top.location != location) {
+		    top.location.href = document.location.href ;
+		}
+		</script>
+
+
+		<script type="text/javascript" src="js/prettify.js"></script>
+		<link rel="stylesheet" href="css/prettify.css">
+		<style>
+			.example-box 
+			{
+				background: #42B7ED;
+				border-radius:5px;
+				text-align:center;
+				padding:5px;
+			}
+		</style>
+	</head>
+	
+<body>
+	<!-- GO TO TOP BUTTON -->
+	<div id="totop" class="hidden-phone hidden-tablet"><a class="btn btn-inverse">^</a></div>
+	<div class="container" id="main-container">
+	
+		<header>
+			<h1 id="logotype"><a href="index.php"><img src="images/logo.png" alt="Real Ajax Uploader logo"></a></h1>
+			<div id="social">
+				<ul>
+					<li><a href="https://www.facebook.com/xscripts"><img src="images/icons/facebook.png" alt="Facebook"></a></li>
+					<li><a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a></li>
+					<li><a href="https://plus.google.com/share?url=http://www.albanx.com/ajaxuploader/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icons/gplus.png" alt="Google+"></a></li>
+					<li><a target="_blank" href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.albanx.com%2Fajaxuploader%2F&media=http%3A%2F%2Fwww.albanx.com%2Fajaxuploader%2Fimages%2Flogo.png&description=Real%20Ajax%20Uploader%20HTLM5" data-pin-do="buttonPin" data-pin-config="none"><img src="images/icons/ptrest.png" alt="Pinterest"></a></li>
+				</ul>
+			</div>
+		</header>
+		<section id="navigation">
+			<div class="span12">
+
+				<div class="row">
+					<nav>
+					<ul id="main-navigation" class="hidden-phone hidden-tablet">
+						<li><a href="index.html">How to setup</a></li>
+						<li><a href="options.html">Options and Methods</a></li>
+						<li><a href="changelog.html">Change log</a></li>
+						<li class="current-menu-item"><a href="faq.html">FAQ</a></li>
+					</ul>
+					</nav>
+				</div>
+			</div>
+		</section>			
+		<div id="content" class="entry portfolio-layout portfolio-3col gallery">
+		
+		
+		
+		
+		
+		
+		
+<div class="row-fluid">
+<div class="span12">
+	<div id="faqholder">
+		<h3>About Real Ajax Uploader</h3>
+		<dl>
+			<dt><span class="colored">Q</span>What is Real Ajax Uploader?</dt>
+			<dd>
+				<p>Real Ajax Uploader is a PHP/ASPX/Javascript based script for uploading files on the web with the power of HTML5 and Ajax.</p>
+			</dd>
+			
+			<dt><span class="colored">Q</span>Why should I use Real Ajax Uploader?</dt>
+			<dd>
+			<p>It allows multiple file uploads at once, upload with drag and drop from your desktop, upload by chunk and only with javascript and more.</p>
+			</dd>
+			
+			<dt><span class="colored">Q</span>But there are many ajax uploaders around the web, why should I choose this?</dt>
+			<dd>
+			<p>Real Ajax Uploader is design to be simple and be used by any kind of user, from the web designer to the web developer. It needs 3 based files to work:
+				upload.php, ajaxupload.js and jQuery. Internal code is clean well formated and really simple. The developer license cost $50 and has no limits. Source code is 
+				always included. The most expensive license cost $100 (still not avaiable).</p>
+			</dd>
+			
+			<dt><span class="colored">Q</span>Is Real Ajax Uploader a professional product or it is just an amateur script?</dt>
+			<dd>
+				<p>Real Ajax Uploader has been start developed by the R&amp;D department of a big prepress media company <a href="http://www.clxeurope.com">CLXEurope</a> at the 
+				start of 2009.
+				It is used the main application of the company (<a href="http://www.clxeurope.com/mms/">MMS</a>) for trasfering media files (high TIFF resolution images)
+				 from 100MB to 2GB</p>
+			</dd>
+		</dl>
+		
+		<h3>Technical questions</h3>
+		<dl>
+			<dt><span class="colored">Q</span>Which browser supports Real Ajax Uploader?</dt>
+			<dd>
+				<p>It supports all browsers. On HTML5 (FF3.6+, Safari 5+, Opera 12+, IE10, Chrome, mobile Chrome) browsers it will use ajax upload.
+				On not-HTML5 browser the uploader will try to use a Flash Upload, otherwise it will use standard html4 upload.</p>
+			</dd>
+			
+			<dt><span class="colored">Q</span>Do I need to change any server side setting?</dt>
+			<dd>
+				<p>If you're targeting users with html5 browsers normally you do not need to change any parameter. But to be sure to support
+				all users this parameters should be set to wanted values (php):</p>
+				<ul>
+					<li>max_input_time : Maximum amount of time each script may spend parsing request data</li>
+					<li>max_execution_time: if you disable chunking this paramter should be changed</li>
+					<li>post_max_size: this parameter should be changed if chunking is disabled</li>
+					<li>upload_max_filesize: needed on old browser, decide the maximum file upload size</li>
+				</ul>
+			</dd>
+			
+			<dt><span class="colored">Q</span>After upload finish I want to redirect user to another page?</dt>
+			<dd>
+				<p>Use the finish event:</p>
+				<pre class="prettyprint linenums">
+$('#div').ajaxupload({
+	finish: function(){
+		location.href='http://www.google.com';
+	}
+});
+				</pre>
+			</dd>
+			
+			<dt><span class="colored">Q</span>Does Real Ajax Uploader supports mobile upload?</dt>
+			<dd>
+				<p>Real Ajax Uploader has been tested with mobile Google Chrome on Android, Android 4.2 default browser. Actually does not work on Android 2.x default browser.
+				On IOS it has not still been tested properly.</p>
+			</dd>
+
+			<dt><span class="colored">Q</span>Is possible to display uploaded files after a page refresh?</dt>
+			<dd>
+				<p>Real Ajax Uploader just uploads files. It is not a file manager. That means that after files had been uploaded, and if you close the page or refresh it
+				the uploader does not remember (at this version) the list of uploaded files. To have the list of uploaded files, one should write a script in a page that reads uploaded files
+				from system or database and diplay them on the page. Future version of the uploader will remember the uploaded files without a sever side script. (In progress) </p>
+			</dd>
+			
+			<dt><span class="colored">Q</span>How can I hide the single buttons from the uploader (upload, remove buttons)?</dt>
+			<dd>
+				<p>Every element of the uploader has a CSS class, so it can be styled as wish (<a href="http://www.albanx.com/ajaxuploader/doc.php?e=2#classes">CSS classes</a>). 
+				After you have setup the uploader just add this css instruction:</p>
+<pre class="prettyprint linenums">
+&lt;style&gt;
+.ax-button{
+	display:none;
+}
+&lt;/style&gt;
+</pre>
+			</dd>
+			
+			<dt><span class="colored">Q</span>On IE 9,8,7 the file do not get uploaded (flash plugin), but shows 100%?</dt>
+			<dd>
+				<p> When Flash upload does not work (on not-html5 browsers) there maybe some reason:</p>
+				<ul>
+					<li>Request returns HTTP 302 Found error: this is a security problem. To solve on Apache add this line to the .htaccess file:
+<pre class="prettyprint linenums">
+SecFilterEngine Off
+</pre>
+					
+					</li>
+					<li>Next common errors... to be updated</li>
+				</ul>
+			</dd>
+			
+			<dt><span class="colored">Q</span>On IE 9,8,7 file uploder theme is not loaded?</dt>
+			<dd>
+				<p>IE9, 8, 7 has a limit in loading stylesheet files. This version of IE cannot load more then 31 stylesheets (<a href="http://msdn.microsoft.com/en-us/library/ie/hh920762%28v=vs.85%29.aspx">see here</a>)
+				So if the Real Ajax Uploader theme is loaded after the 31 style sheet, IE wont load it. (F***K IE). This limit has been removed from IE10.
+				(<i>Thanks to Bruno Schroeder</i>)</p>
+			</dd>
+		</dl>
+	</div>
+</div>
+</div>
+
+
+
+
+
+		</div>
+
+		
+		<div class="row" id="footer">
+			<div class="span12">
+				<div id="copyright"><p>&copy; 2013, <a href="http://www.albanx.com">www.albanx.com</a>, Alban Xhaferllari</p></div>
+			</div>
+		</div>
+		
+			
+	<!--  javascripts  -->
+	<script src="js/common.js"></script><!--   custom scripts  -->
+	</div>
+	<div class="spacer"></div>
+
+	<script type="text/javascript">
+	 window.prettyPrint && prettyPrint();
+	</script>
+</body>
+</html>

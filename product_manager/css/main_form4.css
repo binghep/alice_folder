@@ -1,0 +1,324 @@
+table {
+    border-collapse: collapse;
+}
+#container {
+	/*margin-top: 20px !important;*/
+    margin: 0 auto 10px auto;
+    width: 672px !important;
+    border-radius: 5px;
+    padding: 20px 20px 30px 20px;
+    background-color: #fff;
+    border: none !important;
+    box-shadow: 0 1px 5px rgba(0,0,0,.2) !important;
+}
+table, th, td {
+    /*border: 1px solid #CECECE;*/
+}
+
+input[type=checkbox] {
+  /* All browsers except webkit*/
+  transform: scale(1.5);
+  /* Webkit browsers*/
+  -webkit-transform: scale(1.5);
+}
+.btn {
+    width: 180px;
+	height: 50px;
+}
+
+		div.header{
+			background: hsla(231, 48%, 48%, 0.28);
+			height: 24px;
+			padding: 5px 10px;
+		}
+		.category_block{
+			/*padding: 5px 10px;*/
+	margin: 0 auto 0px auto;
+    width: 660px;
+    background: rgba(5, 126, 255, 0.14);
+    /*padding: 4px 155px;*/
+    border-radius: 0px 0px 50px 50px;
+		}
+		.table_block{
+			/*background: white;*/
+			/*background: rgb(240,240,240);*/
+
+		}
+		/*input{
+			margin: 5px 5px;
+			border:1px solid black;
+		}*/
+		.amazon,.jd,.taobao,.tmall,.price{
+			width:70px;
+			float:right;
+
+		}
+
+		.special_price{
+			width:70px;
+			float:right;
+		}
+		.l{
+			float:left;
+		}
+		input[type="text"]{
+			float:right;
+		}
+		input.url_amazon,input.url_jd,input.url_taobao,input.url_tmall{
+			width:260px;
+		}
+		span{
+			/*margin: 5px 0px;*/
+		}
+		table,tr{
+			padding:5px 5px;
+			/*border:#B3B3B3 !important;*/
+		}
+		td.no_left_border{
+			border-left:none !important;
+		}
+		td.no_right_border{
+			border-right:none !important;
+		}
+		span.col_2_label{
+			width:80px;
+		}
+
+		/**/
+		/*#filter_toggle{
+			float:right;
+		}*/
+
+		/*#filter_close_button_wrapper{
+		    margin-right: 20px;
+		    padding-bottom: 25px;
+		}*/
+
+		#close_pop_up{
+			float: right;
+		}
+		.black_overlay{
+			display: none;
+			/*position: absolute;*/
+			position: fixed;/*This fills the whole screen even when scroll down*/
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index:1001;
+			-moz-opacity: 0.8;
+			opacity:.80;
+			filter: alpha(opacity=80);
+		}
+		.white_content{
+			display: none;
+			/*position: absolute;*/
+			position: fixed;/*This fills the whole screen even when scroll down*/
+			top: 25%;
+			left: 25%;
+			width: 50%;
+			height: 50%;
+			padding: 16px;
+			border: 16px solid orange;
+			background-color: white;
+			z-index:1002;
+			overflow: auto;
+		}
+		/*#float_filter_block{
+		    background: hsl(231, 100%, 86%);
+		    position: absolute;
+
+		    top: 105px; 
+		    float: right;
+		    margin-left: 37px;
+		    display: none;
+		    position: absolute;how to overlay two on div on other general html elements? make its position absolute
+		    padding: 15px 15px;
+		    z-index: 100;/*above the bootstrap pager
+		}*/
+		.header{
+		    margin: 0 auto 0px auto;
+		    width: 640px;
+		}
+		.category_block{
+		    margin: 0 auto 0px auto;
+		    width: 640px;
+		}
+		body{
+			padding-bottom: 40px !important;
+			margin:0 !important;
+		    /*background: none;*/
+		    background: url(../img/page-bg-tile.jpg) center;
+		    -webkit-background-size: 50px 50px;
+		    -moz-background-size: 50px 50px;
+		    -o-background-size: 50px 50px;
+		    background-size: 50px 50px;
+		}
+		#pager{
+			width: 640px;
+		    /*margin: 0 auto 10px auto;*/
+		    /*margin:4px auto 4px auto;*/
+    text-align: center;
+    /* margin: 0 auto 10px auto; */
+    margin: 0 auto;
+    background: rgba(5, 126, 255, 0.14);
+    padding: 3px 26px;
+    border-radius: 50px 50px 0px 0px;
+		}
+		ul.pagination{
+			display: inline !important;
+			margin: 0px 3px;
+			 float: right;
+		}
+		.glyphicon{
+			padding: 2.5px 0px;
+		}
+		.container{
+			width:100%;
+		/*	margin-right: 0px;
+			margin-left:0px;*/
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.pagination>li>a, .pagination>li>span {
+			padding: 6px 8px; /*make the square smaller*/
+		}
+		#page_x_out_of_x_span{
+			color: black;
+			font-weight:bold;
+			float:left;
+			padding-top: 8px;
+		}
+
+		.pagination>li:last-child>a, .pagination>li:last-child>span {
+			border-top-right-radius: 0px !important;
+    		border-bottom-right-radius: 0px !important;
+    		float: left !important;
+		}
+		form ul#main_form_ul_part_b{
+		    padding: 10px 10px 70px 10px;
+		}
+		form ul#main_form_ul{
+			padding: 0px 10px;
+		}
+		form li.buttons {
+			padding: 46px 1% 2px 1%;
+		}
+		.info {
+			margin: 9px 0 0px 0 !important;
+			padding:0 1% 8px 1% !important;
+		}
+		#logo{
+			text-indent: 0px !important;
+		}
+/*		input.text, input.search, textarea.textarea {
+		    border-top: 1px solid #7c7c7c !important;
+		    border-left: 1px solid #7c7c7c !important;
+		    border-right: 1px solid #7c7c7c !important;
+		    border-bottom: 1px solid #7c7c7c !important;
+		}*/
+		#search_sku{
+			float:left;
+		}
+		#search_sku_span{
+			float:left;
+			position: relative;
+    		bottom: -7px;
+		}
+		#search_sku_button{
+			float:right;
+			width: 101px !important;
+    		height: 25px !important;
+			padding:0px !important;
+			font-size: 12px !important;
+		}
+		#search_sku_span>input#search_sku{
+			display: inline;
+    		width: 140px;
+    		height: 23px;
+    		margin-top: 1px;
+		}
+
+		
+.wufoo li{
+		width: 100%;
+	}
+	/*Make the input fields like evernote login fields*/
+	.TextInput {
+	    color: #3b3b3b;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	    box-sizing: border-box;
+	    width: 100%;
+	    border: 1px solid #cacaca !important;
+	    -webkit-border-radius: 2px;
+	    -moz-border-radius: 2px;
+	    border-radius: 2px;
+	    line-height: 1.46153846;
+	    font-size: 1.08333333em ;
+	    font-size: 1.08333333rem;
+	    padding: .46153846em .92307692em;
+	    padding: .5rem 1rem;
+	}
+	.TextInput_large {
+	    line-height: 1.1875 !important;
+	    font-size: 1.73333333em !important;
+	    font-size: 1.73333333rem !important;
+	    padding: .59375em .75em !important;
+	    padding: .79166667rem 1rem !important;
+	}
+	form ul#main_form_ul{
+      	padding:0px !important;
+    }
+    #name{
+    	font-family: caecilia,Times,serif;
+	    font-style: normal;
+	    font-weight: 400;
+	    font-size: 21px;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    line-height: 24px;
+	    color: #005c78;
+	    margin-top: 5px;
+	    margin-bottom: 3px;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    float: left;
+    }
+    .has_underline{
+    	text-decoration: underline;
+    }
+    form.wufoo {
+        margin:0px !important;
+    }
+
+    li{
+    	list-style-type: none !important;
+    }
+    ul{
+    	padding-left: 0px !important;
+    }
+
+    .i_recommend_label{
+    	padding: 0 15px;
+	    display: inline !important;
+	    color: #747474;
+	    line-height: 1.41666667;
+	    font-weight:normal !important;
+    }
+
+    .competitor_block{
+    	background-color: #efefef;
+		padding: 5px 13px;
+		border: 1px solid #dedede;
+	    -webkit-border-radius: 2px;
+	    -moz-border-radius: 2px;
+	    border-radius: 2px; 
+    }
+
+    
+  

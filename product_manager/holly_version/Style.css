@@ -1,0 +1,88 @@
+
+            .body_TiledCartoonBricks {
+                background-image: url("Cartoon_Bricks.JPG");
+                font-size: 25px;
+                text-align: center;
+
+            }
+            .body_WoodBackgroundImageNoRepeat{
+                background-image: url("Aero_Woods.jpg");
+                background-repeat: no-repeat;
+                font-size: 25px;
+                text-align: center;
+            }
+		
+            label{
+                display:block;
+                color:black;
+            }
+
+            h2 {
+                color: orange;
+            }
+            span {
+                height: 2.6em;
+                color: yellow;
+                font-family: arial,sans-serif;
+            }
+            .silver {
+               background-color:rgba(102,118,134,0.5);
+            }
+            p {
+                font-family: verdana, arial, sans-serif; 
+                font-size: 20px;
+                text-align: center;
+            }
+            p.loc{
+				color: white;
+			}
+			p.italic {
+                font-style: italic;
+            }
+            .container {
+               width:800px;
+				margin: 0 auto;
+				
+            }
+
+            
+            .myTable td {
+                background-clip: padding-box; 
+                border-radius: 10px;
+                background-color: rgba(20,20,150,0.8);
+                color: #CC0099;
+                border: 2px solid SlateGray;
+            }
+
+            .myTable th {
+                background-clip: padding-box; 
+                border-radius: 10px;
+                background-color: rgba(40,40,50,0.8);
+                color: black;
+                border: 2px solid black;
+            }
+             .link_w_background{
+                 
+             }
+
+            .link_w_background a { 
+                padding-left: 15px; 
+                background: url("Nav_Bg_Pic.png") 300px; 
+                border: 2px solid;
+            }
+    .link_container {
+		border: 2px solid;
+		width: 100%;
+		height: 25px;
+	}
+
+	.link_container a {
+		display: inline;
+		background: pink;
+		height: 100%;
+		text-align: center;
+	}
+
+	.link_container a:hover {
+		background: white;
+	}
