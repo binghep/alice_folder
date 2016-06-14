@@ -2,6 +2,7 @@
 //http://www.1661hk.com/alice/product_manager/api.php?class=research_note&worker_id=14&new_value=testtest&sku=2912900288325540C
 // if output of this file contains 'Failed.', then we display the error message in a newly created span in that cell the user is trying to update. 
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+session_start();
 if (!isset($_SESSION['user'])){
 	header('Location: trimmed_version/login.php');
 }

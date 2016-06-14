@@ -265,7 +265,7 @@ if (!empty($success_insert_into_database_msg)){
 				">
 		</div>
 	</li>
-<?php var_dump( $retrieved_standalone_product->name);?>
+<?php //var_dump( $retrieved_standalone_product->name);?>
 	<li class="main_form_li">
 		<label class="desc">Product Sku / 产品sku</label>
 		<div>

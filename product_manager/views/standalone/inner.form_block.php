@@ -96,7 +96,7 @@ if (!empty($_POST['submit'])){
 			if (!$load_result){
 				$error_msg.='error. Failed to find the product in database. <br>';
 			}else{
-				$success_insert_into_database_msg="Successfully submitted new product info. Please click on ".'<a style="margin-right:4px;margin-top: 8px;background: #DEDEDE;text-decoration: none;color: black;padding:2.5px 3px;border: 1px solid black;" href="index-standalone.php">This button</a>'." to upload next one.<br>您已成功提交新产品信息。请点击 " .'<a style="background: #DEDEDE;text-decoration: none;color: black;padding:2.5px 3px;border: 1px solid black;" href="index-standalone.php">这个按钮</a>'. " 来提交下一个产品。";
+				$success_insert_into_database_msg="Successfully submitted new product info. Please click on ".'<a style="margin-right:4px;margin-top: 8px;background: #DEDEDE;text-decoration: none;color: black;padding:2.5px 3px;border: 1px solid black;" href="standalone.index.php">This button</a>'." to upload next one.<br>您已成功提交新产品信息。请点击 " .'<a style="background: #DEDEDE;text-decoration: none;color: black;padding:2.5px 3px;border: 1px solid black;" href="standalone.index.php">这个按钮</a>'. " 来提交下一个产品。";
 			}
 		}
 	}
@@ -153,6 +153,7 @@ function saveProductToDatabase($name,$sku,$image){
 	    // echo 'inserting product in database success.';
 	}else{
 	    $error_msg.=$product_model::$last_error.'<br>';
+	    // var_dump($product_model::$last_error);
 	    return array('status'=>false,'error_msg'=>$error_msg);
 	    //e.g: sku already exist, connection error. insert error. 
 	}
