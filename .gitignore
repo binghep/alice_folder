@@ -1,0 +1,17 @@
+#product manager + libarary + PHPMailer folder inside Alice folder
+
+# Ignore everything
+*
+
+# except (higher precedence)
+!.gitignore
+!product_manager/
+!library/fpdf/fpdf181/
+library/fpdf/fpdf181/*.pdf
+#!PHPMailer/
+
+
+#ignore the following inside above wanted folders
+product_manager/database/database.php
+product_manager/holly_version/database.php
+product_manger/uploads/
