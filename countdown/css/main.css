@@ -1,0 +1,75 @@
+        .form-container {
+            /*border: 1px solid #f2e3d2;*/
+            background: #c9b7a2;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f2e3d2), to(#c9b7a2));
+            background: -webkit-linear-gradient(top, #f2e3d2, #c9b7a2);
+            background: -moz-linear-gradient(top, #f2e3d2, #c9b7a2);
+            background: -ms-linear-gradient(top, #f2e3d2, #c9b7a2);
+            background: -o-linear-gradient(top, #f2e3d2, #c9b7a2);
+            background-image: -ms-linear-gradient(top, #f2e3d2 0%, #c9b7a2 100%);
+/*            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;*/
+            
+            /*-webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+            -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+            box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+            font-family: 'Helvetica Neue',Helvetica,sans-serif;
+            */
+            text-decoration: none;
+            vertical-align: middle;
+            padding: 3px;
+            width: 100%;
+            height: auto!important;
+            margin: 10px 0px;
+        }
+      /*  .countdownHolder{
+            border: 1px solid #969696;
+            padding-top: 10px;
+            background: -webkit-linear-gradient(top, #f2e3d2, #c9b7a2);
+            border-radius: 8px;
+        }*/
+        .map-icon{
+        	width:23px;
+        	height: 23px;
+        }
+/*        body{
+            font-size:14px;
+        }*/
+        .count_down_text{
+            font-size: 16px;
+            line-height: 1.5em;
+            text-align: left;
+            padding: 10px 40px;
+            /*
+            text-align:center; 
+            margin:10px 0px;*/
+        }
+
+        .rectangle_span{
+            padding: 3px 2px;
+            position: relative;
+            top: -2px;
+        }
+        </style>
+        <style>
+.countdownHolder {
+    width: 100%;
+    /* letter-spacing: -3px; */
+}
+@media (max-width: 550px){
+.countdownHolder {
+
+    font: 20px/1.5 'Open Sans Condensed',sans-serif !important;
+}
+.countDiv {
+    top: -13px !important;
+	font-size: 12px !important;
+}
+.countSeconds {
+display:none; 	
+}
+#countdown > span.countDiv.countDiv3 {
+display:none;	
+}
+}

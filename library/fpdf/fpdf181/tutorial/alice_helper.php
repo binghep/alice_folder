@@ -41,7 +41,7 @@ class configuration{
     }
     public function printSummary($pdf, $top_txt, $bottom_txt=""){
         $pdf->addPage();
-        $pdf->SetXY(20,80);
+        $pdf->SetXY(17,20);
         // $pdf->Cell(0,0,$summary,0,0,'L');
         $height=7;
         $width=300;
@@ -51,7 +51,8 @@ class configuration{
         $pdf->MultiCell($width,$height,$top_txt,$border,$align,$fill);
         // array_map('unlink', glob("/usr/share/nginx/www/ipzmall.com/media/alice_image_download/*"));
         if (!empty($bottom_txt)){
-            $pdf->SetXY(60,150);
+            // $pdf->SetXY(60,150);
+            $pdf->SetXY(17,45);
             $pdf->MultiCell($width,$height,$bottom_txt,$border,$align,$fill);
         }
     }

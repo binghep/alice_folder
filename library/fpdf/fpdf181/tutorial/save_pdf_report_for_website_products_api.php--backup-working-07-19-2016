@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title></title>
-</head>
-<body>
-
 <?php
 // error_reporting(E_ALL);
 // ini_set('display_errors', 1);
@@ -143,8 +135,7 @@ $pdf->SetTitle('Price Research Report for 1661USA.com products');
 $config=new configuration();
 $summary="Price Research Report for 1661USA Website Products\n{$start_date} ~ {$end_date} (Beijing)\n".count($all_eligible_products)." products were updated and have competitor price.";
 // $config->printSummary($pdf,$summary);
-// echo "<pre>";
-// var_dump($all_eligible_products);
+
 //--------------------build a $recommended_products array--------------------------
 $recommended_products=array();
 foreach ($all_eligible_products as $object) {
@@ -153,33 +144,17 @@ foreach ($all_eligible_products as $object) {
     }//else //"0" or NULL
 }
 // var_dump($recommended_products);
-// return;
-// var_dump($recommended_products);
 //------------------build summary_bottom string-------------------------------------
-// $summary_bottom="We recommend ".count($recommended_products)." products.\n";
-$summary_bottom="";
-$worker_count=1;
+$summary_bottom="We recommend ".count($recommended_products)." products.\nThe following are the number of products updated by each employee in this date range:\n";
 foreach ($workers as $worker) {
     $product_count=count($worker['products']);
-    $num_recommended=count_total_by_worker($recommended_products,$worker->worker_id);
-    $summary_bottom.=$worker_count.". ".$worker['worker_name']." - ".$product_count." products - $num_recommended Recommended\n";
-    $worker_count++;
-}
-
-function count_total_by_worker($products,$worker_id){
-    $count=0;
-    foreach ($products as $product) {
-        if ($product->worker_id===$worker_id){
-            $count++;
-        }
-    }
-    return $count;
+    $summary_bottom.=$worker['worker_name'].": ".$product_count." products.\n";
 }
 // var_dump($summary_bottom);
 // var_dump($summary);
 
 $config->printSummary($pdf,$summary,$summary_bottom);
-echo "LOOK: summary: ".str_replace("\n","<br>", $summary)." summary_bottom: ".str_replace("\n","<br>",$summary_bottom)."END";
+
 
 //--------------------print recommended products section----------------------
 if (!empty($recommended_products)){
